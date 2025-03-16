@@ -380,10 +380,10 @@ async function drawBigCard(
 
     ctx.drawImage(
         getRankIcon(rank.rank || null, rankIcon),
-        posX - rankIcon.width / 3.6,
+        posX - rankIcon.platinum.width / 3.6,
         config.rank.iconTopY - (isTop ? 0 : 3),
-        rankIcon.width / 1.8,
-        rankIcon.height / 1.8
+        rankIcon.platinum.width / 1.8,
+        rankIcon.platinum.height / 1.8
     );
 
     if (isTop && rank.rank === 1) {
@@ -441,10 +441,10 @@ async function drawSmallCard(
     ctx.drawImage(smallCard, x, posY.card + config.card2.diffY * pos);
     ctx.drawImage(
         getRankIcon(rank.rank || null, rankIcon),
-        iconX - rankIcon.width / 6,
-        posY.icon - rankIcon.height / 6 + config.rank.diffY * pos,
-        rankIcon.width / 3,
-        rankIcon.height / 3
+        iconX - rankIcon.platinum.width / 6,
+        posY.icon - rankIcon.platinum.height / 6 + config.rank.diffY * pos,
+        rankIcon.platinum.width / 3,
+        rankIcon.platinum.height / 3
     );
 
     ctx.font = `${config.profile.weight} ${config.profile.size}px 'profile'`;
