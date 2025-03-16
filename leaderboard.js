@@ -111,430 +111,6 @@ const config = {
 };
 const apiImage = "https://atsuko.mysrv.us";
 
-//Dummy
-const ranks = {
-    count: 51,
-    schedule: {
-        season: 66,
-        terrain: "Indoor",
-        date: "04-Mar-2025",
-        raid: "Shirokuro",
-        dev_name: "Shirokuro",
-        color: "#3772A9",
-    },
-    rows: [
-        {
-            ign: "Zeinu",
-            id_member: 27,
-            id_fav_student: 20007,
-            rank: 1,
-            score: 39754002,
-            ranking: 1,
-        },
-        {
-            ign: "liuzi",
-            id_member: 120,
-            id_fav_student: 10004,
-            rank: 3,
-            score: 39752641,
-            ranking: 2,
-        },
-        {
-            ign: "Mordred",
-            id_member: 119,
-            id_fav_student: 20039,
-            rank: 6,
-            score: 39731922,
-            ranking: 3,
-        },
-        {
-            ign: "Mizary",
-            id_member: 25,
-            id_fav_student: 10049,
-            rank: 10,
-            score: 39715921,
-            ranking: 4,
-        },
-        {
-            ign: "Kus",
-            id_member: 30,
-            id_fav_student: 23004,
-            rank: 11,
-            score: 39710243,
-            ranking: 5,
-        },
-        {
-            ign: "Nemura",
-            id_member: 23,
-            id_fav_student: 13006,
-            rank: 13,
-            score: 39706002,
-            ranking: 6,
-        },
-        {
-            ign: "Tarako",
-            id_member: 99,
-            id_fav_student: 10038,
-            rank: 14,
-            score: 39705121,
-            ranking: 7,
-        },
-        {
-            ign: "Kuro",
-            id_member: 39,
-            id_fav_student: 20039,
-            rank: 16,
-            score: 39702320,
-            ranking: 8,
-        },
-        {
-            ign: "ZedoX",
-            id_member: 36,
-            id_fav_student: 10004,
-            rank: 21,
-            score: 39695680,
-            ranking: 9,
-        },
-        {
-            ign: "Exus",
-            id_member: 1,
-            id_fav_student: 10014,
-            rank: 22,
-            score: 39694002,
-            ranking: 10,
-        },
-        {
-            ign: "Ryft",
-            id_member: 6,
-            id_fav_student: 20027,
-            rank: 24,
-            score: 39692322,
-            ranking: 11,
-        },
-        {
-            ign: "Layt",
-            id_member: 14,
-            id_fav_student: 10091,
-            rank: 25,
-            score: 39691441,
-            ranking: 12,
-        },
-        {
-            ign: "Faza",
-            id_member: 21,
-            id_fav_student: 10002,
-            rank: 28,
-            score: 39689363,
-            ranking: 13,
-        },
-        {
-            ign: "uryaa_",
-            id_member: 38,
-            id_fav_student: 10083,
-            rank: 33,
-            score: 39685681,
-            ranking: 14,
-        },
-        {
-            ign: "Yorita",
-            id_member: 19,
-            id_fav_student: 10004,
-            rank: 37,
-            score: 39680401,
-            ranking: 15,
-        },
-        {
-            ign: "ヒガシダ",
-            id_member: 75,
-            id_fav_student: null,
-            rank: 43,
-            score: 39674161,
-            ranking: 16,
-        },
-        {
-            ign: "Fsanctxサキ",
-            id_member: 46,
-            id_fav_student: 20014,
-            rank: 44,
-            score: 39672800,
-            ranking: 17,
-        },
-        {
-            ign: "Trake",
-            id_member: 17,
-            id_fav_student: 10098,
-            rank: 58,
-            score: 39655602,
-            ranking: 18,
-        },
-        {
-            ign: "Kazama",
-            id_member: 77,
-            id_fav_student: 16013,
-            rank: 61,
-            score: 39653680,
-            ranking: 19,
-        },
-        {
-            ign: "Franz",
-            id_member: 71,
-            id_fav_student: 10035,
-            rank: 62,
-            score: 39652801,
-            ranking: 20,
-        },
-        {
-            ign: "Crenian",
-            id_member: 29,
-            id_fav_student: 13000,
-            rank: 66,
-            score: 39650800,
-            ranking: 21,
-        },
-        {
-            ign: "Doyle",
-            id_member: 18,
-            id_fav_student: 10021,
-            rank: 72,
-            score: 39644723,
-            ranking: 22,
-        },
-        {
-            ign: "Marista",
-            id_member: 47,
-            id_fav_student: null,
-            rank: 73,
-            score: 39644320,
-            ranking: 23,
-        },
-        {
-            ign: "Asep",
-            id_member: 116,
-            id_fav_student: 10108,
-            rank: 76,
-            score: 39641442,
-            ranking: 24,
-        },
-        {
-            ign: "DedekPlana",
-            id_member: 37,
-            id_fav_student: null,
-            rank: 79,
-            score: 39635840,
-            ranking: 25,
-        },
-        {
-            ign: "Mocaxie",
-            id_member: 85,
-            id_fav_student: null,
-            rank: 80,
-            score: 39633040,
-            ranking: 26,
-        },
-        {
-            ign: "Kidd",
-            id_member: 32,
-            id_fav_student: 10077,
-            rank: 82,
-            score: 39632000,
-            ranking: 27,
-        },
-        {
-            ign: "—͟͞͞ⲙ๏๏ꛘ",
-            id_member: 103,
-            id_fav_student: 16007,
-            rank: 90,
-            score: 39627520,
-            ranking: 28,
-        },
-        {
-            ign: "Gry",
-            id_member: 44,
-            id_fav_student: null,
-            rank: 92,
-            score: 39626641,
-            ranking: 29,
-        },
-        {
-            ign: "Hacho",
-            id_member: 113,
-            id_fav_student: 10062,
-            rank: 103,
-            score: 39617200,
-            ranking: 30,
-        },
-        {
-            ign: "YuuKaede",
-            id_member: 35,
-            id_fav_student: 10067,
-            rank: 106,
-            score: 39613280,
-            ranking: 31,
-        },
-        {
-            ign: "Eve",
-            id_member: 34,
-            id_fav_student: 23003,
-            rank: 117,
-            score: 39608161,
-            ranking: 32,
-        },
-        {
-            ign: "Meggumi",
-            id_member: 4,
-            id_fav_student: 10086,
-            rank: 153,
-            score: 39587440,
-            ranking: 33,
-        },
-        {
-            ign: "Serion",
-            id_member: 76,
-            id_fav_student: null,
-            rank: 234,
-            score: 39561920,
-            ranking: 34,
-        },
-        {
-            ign: "Ursalia",
-            id_member: 117,
-            id_fav_student: 10004,
-            rank: 244,
-            score: 39555599,
-            ranking: 35,
-        },
-        {
-            ign: "Komari",
-            id_member: 28,
-            id_fav_student: 10018,
-            rank: 274,
-            score: 39543601,
-            ranking: 36,
-        },
-        {
-            ign: "Lazu",
-            id_member: 70,
-            id_fav_student: 20016,
-            rank: 431,
-            score: 39475602,
-            ranking: 37,
-        },
-        {
-            ign: "Alice",
-            id_member: 2,
-            id_fav_student: 20040,
-            rank: 774,
-            score: 39267198,
-            ranking: 38,
-        },
-        {
-            ign: "Thio",
-            id_member: 15,
-            id_fav_student: 10080,
-            rank: 799,
-            score: 39256244,
-            ranking: 39,
-        },
-        {
-            ign: "Walang",
-            id_member: 9,
-            id_fav_student: 20013,
-            rank: 853,
-            score: 39219121,
-            ranking: 40,
-        },
-        {
-            ign: "Epinefrin",
-            id_member: 20,
-            id_fav_student: null,
-            rank: 869,
-            score: 39207680,
-            ranking: 41,
-        },
-        {
-            ign: "RinSo",
-            id_member: 22,
-            id_fav_student: null,
-            rank: 874,
-            score: 39202643,
-            ranking: 42,
-        },
-        {
-            ign: "Teio55",
-            id_member: 48,
-            id_fav_student: 20008,
-            rank: 893,
-            score: 39192481,
-            ranking: 43,
-        },
-        {
-            ign: "Lest",
-            id_member: 8,
-            id_fav_student: 10066,
-            rank: 969,
-            score: 39124403,
-            ranking: 44,
-        },
-        {
-            ign: "Teru",
-            id_member: 73,
-            id_fav_student: null,
-            rank: 988,
-            score: 39110320,
-            ranking: 45,
-        },
-        {
-            ign: "SneK",
-            id_member: 3,
-            id_fav_student: 10002,
-            rank: 991,
-            score: 39107920,
-            ranking: 46,
-        },
-        {
-            ign: "Dian911",
-            id_member: 41,
-            id_fav_student: 13001,
-            rank: 1081,
-            score: 39028561,
-            ranking: 47,
-        },
-        {
-            ign: "Dappa",
-            id_member: 12,
-            id_fav_student: 10049,
-            rank: 1768,
-            score: 27753984,
-            ranking: 48,
-        },
-        {
-            ign: "Fueeru",
-            id_member: 5,
-            id_fav_student: 10029,
-            rank: 2428,
-            score: 27741376,
-            ranking: 49,
-        },
-        {
-            ign: "R4deus",
-            id_member: 10,
-            id_fav_student: null,
-            rank: 2638,
-            score: 27738496,
-            ranking: 50,
-        },
-        {
-            ign: "Kusa",
-            id_member: 33,
-            id_fav_student: 10100,
-            rank: 4645,
-            score: 27715840,
-            ranking: 51,
-        },
-    ],
-};
-const type = "ta";
-
 const imageCache = {};
 GlobalFonts.registerFromPath(`fonts/AllenSans-Bold.ttf`, "profile");
 GlobalFonts.registerFromPath(`fonts/Canterbury.ttf`, "logo");
@@ -586,25 +162,6 @@ async function fileExists(path) {
         }
     } catch {
         return false;
-    }
-}
-
-// Fetch data from api
-async function fetchData(url) {
-    try {
-        const response = await fetch(url);
-
-        if (!response.ok) {
-            throw new Error(
-                `Failed to fetch data: ${response.status} ${response.statusText}`
-            );
-        }
-
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        return {};
     }
 }
 
@@ -926,303 +483,316 @@ async function drawSmallCard(
     );
 }
 
-try {
-    // Create canvas and scaling factors
-    const canvas = createCanvas(
-        config.canvas.baseWidth,
-        config.canvas.baseHeight
-    );
+export async function generateLeaderboard(ranks, type) {
+    const images = [];
 
-    const ctx = canvas.getContext("2d");
+    try {
+        // Create canvas and scaling factors
+        const canvas = createCanvas(
+            config.canvas.baseWidth,
+            config.canvas.baseHeight
+        );
 
-    const raidName = ranks?.schedule?.raid || "Unknown";
-    const raidDevName = ranks?.schedule?.dev_name || "Unknown";
-    const rankData = ranks?.rows || [];
-    const raidType = type == "ta" ? "T.Assault" : "G.Assault";
-    const raidTerrain = ranks?.schedule?.terrain || "Unknown";
-    const raidDate = ranks?.schedule?.date || "Unknown";
-    const date = raidDate !== "Unknown" ? new Date(raidDate) : "Unknown";
-    const raidFormattedDate =
-        raidDate !== "Unknown"
-            ? date.toLocaleDateString("en-GB", {
-                  day: "2-digit",
-                  month: "2-digit",
-                  year: "numeric",
-              })
-            : "Unknown";
+        const ctx = canvas.getContext("2d");
 
-    // Import layouts
-    const paths = {
-        layout: "./images/leaderboard/layout.png",
-        layout2: "./images/leaderboard/layout2.png",
-        gradient: "./images/leaderboard/gradient.png",
-        raidPlane: "./images/leaderboard/raid plane.png",
-        raidLayout: "./images/leaderboard/raid layout.png",
-        cardLayout: "./images/leaderboard/card layout.png",
-        cardPlane: "./images/leaderboard/card plane.png",
-        cardBGPlane: "./images/leaderboard/card bgplane.png",
-        card2Layout: "./images/leaderboard/card2 layout.png",
-        card2Plane: "./images/leaderboard/card2 plane.png",
-        card2BGPlane: "./images/leaderboard/card2 bgplane.png",
-        card3Layout: "./images/leaderboard/card3 layout.png",
-        card3Plane: "./images/leaderboard/card3 plane.png",
-        crown: "./images/leaderboard/crown.png",
-        sticker: "./images/leaderboard/sticker.png",
-    };
-    const dynamicPaths = {
-        raidBackground: `./images/raid/background/${raidDevName}.png`,
-        raidSprite: `./images/raid/portrait/${raidDevName}.png`,
-        platinum: `${apiImage}/assets/rank/Platinum.webp`,
-        gold: `${apiImage}/assets/rank/Gold.webp`,
-        silver: `${apiImage}/assets/rank/Silver.webp`,
-        bronze: `${apiImage}/assets/rank/Bronze.webp`,
-        indoor: `${apiImage}/assets/terrain/Indoor.webp`,
-        outdoor: `${apiImage}/assets/terrain/Outdoor.webp`,
-        urban: `${apiImage}/assets/terrain/Urban.webp`,
-    };
+        const raidName = ranks?.schedule?.raid || "Unknown";
+        const raidDevName = ranks?.schedule?.dev_name || "Unknown";
+        const rankData = ranks?.rows || [];
+        const raidType = type == "ta" ? "T.Assault" : "G.Assault";
+        const raidTerrain = ranks?.schedule?.terrain || "Unknown";
+        const raidDate = ranks?.schedule?.date || "Unknown";
+        const date = raidDate !== "Unknown" ? new Date(raidDate) : "Unknown";
+        const raidFormattedDate =
+            raidDate !== "Unknown"
+                ? date.toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                  })
+                : "Unknown";
 
-    const allPaths = { ...paths, ...dynamicPaths };
-    const loadedImages = await loadImages(allPaths);
-    const {
-        layout,
-        layout2,
-        gradient,
-        raidPlane,
-        raidLayout,
-        cardLayout,
-        cardPlane,
-        cardBGPlane,
-        card2Layout,
-        card2Plane,
-        card2BGPlane,
-        card3Layout,
-        card3Plane,
-        crown,
-        sticker,
-        raidBackground,
-        raidSprite,
-        platinum,
-        gold,
-        silver,
-        bronze,
-        indoor,
-        outdoor,
-        urban,
-    } = loadedImages;
+        // Import layouts
+        const paths = {
+            layout: "./images/leaderboard/layout.png",
+            layout2: "./images/leaderboard/layout2.png",
+            gradient: "./images/leaderboard/gradient.png",
+            raidPlane: "./images/leaderboard/raid plane.png",
+            raidLayout: "./images/leaderboard/raid layout.png",
+            cardLayout: "./images/leaderboard/card layout.png",
+            cardPlane: "./images/leaderboard/card plane.png",
+            cardBGPlane: "./images/leaderboard/card bgplane.png",
+            card2Layout: "./images/leaderboard/card2 layout.png",
+            card2Plane: "./images/leaderboard/card2 plane.png",
+            card2BGPlane: "./images/leaderboard/card2 bgplane.png",
+            card3Layout: "./images/leaderboard/card3 layout.png",
+            card3Plane: "./images/leaderboard/card3 plane.png",
+            crown: "./images/leaderboard/crown.png",
+            sticker: "./images/leaderboard/sticker.png",
+        };
+        const dynamicPaths = {
+            raidBackground: `./images/raid/background/${raidDevName}.png`,
+            raidSprite: `./images/raid/portrait/${raidDevName}.png`,
+            platinum: `${apiImage}/assets/rank/Platinum.webp`,
+            gold: `${apiImage}/assets/rank/Gold.webp`,
+            silver: `${apiImage}/assets/rank/Silver.webp`,
+            bronze: `${apiImage}/assets/rank/Bronze.webp`,
+            indoor: `${apiImage}/assets/terrain/Indoor.webp`,
+            outdoor: `${apiImage}/assets/terrain/Outdoor.webp`,
+            urban: `${apiImage}/assets/terrain/Urban.webp`,
+        };
 
-    const rankIcon = { platinum, gold, silver, bronze };
-    const terrainIcon = { indoor, outdoor, urban };
+        const allPaths = { ...paths, ...dynamicPaths };
+        const loadedImages = await loadImages(allPaths);
+        const {
+            layout,
+            layout2,
+            gradient,
+            raidPlane,
+            raidLayout,
+            cardLayout,
+            cardPlane,
+            cardBGPlane,
+            card2Layout,
+            card2Plane,
+            card2BGPlane,
+            card3Layout,
+            card3Plane,
+            crown,
+            sticker,
+            raidBackground,
+            raidSprite,
+            platinum,
+            gold,
+            silver,
+            bronze,
+            indoor,
+            outdoor,
+            urban,
+        } = loadedImages;
 
-    // Background
-    // ctx.fillStyle = "green";
-    // ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(raidBackground, 0, 0);
-    ctx.drawImage(gradient, 0, 0);
+        const rankIcon = { platinum, gold, silver, bronze };
+        const terrainIcon = { indoor, outdoor, urban };
 
-    // Raid box
-    const box = await drawRaid(
-        raidLayout,
-        raidPlane,
-        raidBackground,
-        raidSprite
-    );
+        // Background
+        // ctx.fillStyle = "green";
+        // ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(raidBackground, 0, 0);
+        ctx.drawImage(gradient, 0, 0);
 
-    // Loop card
-    let page = 0;
-    let pos = 0;
-    let localCanvasCreated = false;
-    let canvasPage, ctxPage;
-    for (let i = 0; i < rankData.length; i++) {
-        // Local canvas
-        if (!localCanvasCreated) {
-            canvasPage = createCanvas(
-                config.canvas.width,
-                config.canvas.height
-            );
-            ctxPage = canvasPage.getContext("2d");
-            ctxPage.scale(
-                config.canvas.width / config.canvas.baseWidth,
-                config.canvas.height / config.canvas.baseHeight
-            );
-            ctxPage.drawImage(canvas, 0, 0);
+        // Raid box
+        const box = await drawRaid(
+            raidLayout,
+            raidPlane,
+            raidBackground,
+            raidSprite
+        );
 
-            // Set layout
-            if (page === 0) {
-                ctxPage.drawImage(layout, 0, 0);
-            } else {
-                ctxPage.drawImage(layout2, 0, 0);
+        // Loop card
+        let page = 0;
+        let pos = 0;
+        let localCanvasCreated = false;
+        let canvasPage, ctxPage;
+        for (let i = 0; i < rankData.length; i++) {
+            // Local canvas
+            if (!localCanvasCreated) {
+                canvasPage = createCanvas(
+                    config.canvas.width,
+                    config.canvas.height
+                );
+                ctxPage = canvasPage.getContext("2d");
+                ctxPage.scale(
+                    config.canvas.width / config.canvas.baseWidth,
+                    config.canvas.height / config.canvas.baseHeight
+                );
+                ctxPage.drawImage(canvas, 0, 0);
+
+                // Set layout
+                if (page === 0) {
+                    ctxPage.drawImage(layout, 0, 0);
+                } else {
+                    ctxPage.drawImage(layout2, 0, 0);
+                }
+
+                // Raid box
+                ctxPage.drawImage(box, config.raid.x, config.raid.y);
+                ctxPage.drawImage(
+                    terrainIcon[raidTerrain.toLowerCase()],
+                    config.raid.iconX - indoor.width / 5.2,
+                    config.raid.iconY - indoor.height / 5.2,
+                    indoor.width / 2.6,
+                    indoor.height / 2.6
+                );
+                ctxPage.font = `${config.raid.weight} ${config.raid.size}px 'number'`;
+                ctxPage.fillStyle = `${config.color[config.raid.color]}`;
+                ctxPage.textAlign = config.raid.align;
+                ctxPage.textBaseline = "alphabetic";
+                ctxPage.fillText(
+                    String(raidType),
+                    config.raid.textX,
+                    config.raid.textY
+                );
+                ctxPage.fillText(
+                    String(raidFormattedDate),
+                    config.date.x,
+                    config.date.y
+                );
+                ctxPage.font = `${config.raid.weight} ${config.raid.nameSize}px 'raid'`;
+                ctxPage.fillStyle = `${config.color[config.raid.nameColor]}`;
+                ctxPage.fillText(
+                    String(raidName),
+                    config.raid.nameX,
+                    config.raid.nameY
+                );
+
+                localCanvasCreated = true;
             }
 
-            // Raid box
-            ctxPage.drawImage(box, config.raid.x, config.raid.y);
-            ctxPage.drawImage(
-                terrainIcon[raidTerrain.toLowerCase()],
-                config.raid.iconX - indoor.width / 5.2,
-                config.raid.iconY - indoor.height / 5.2,
-                indoor.width / 2.6,
-                indoor.height / 2.6
-            );
-            ctxPage.font = `${config.raid.weight} ${config.raid.size}px 'number'`;
-            ctxPage.fillStyle = `${config.color[config.raid.color]}`;
-            ctxPage.textAlign = config.raid.align;
-            ctxPage.textBaseline = "alphabetic";
-            ctxPage.fillText(
-                String(raidType),
-                config.raid.textX,
-                config.raid.textY
-            );
-            ctxPage.fillText(
-                String(raidFormattedDate),
-                config.date.x,
-                config.date.y
-            );
-            ctxPage.font = `${config.raid.weight} ${config.raid.nameSize}px 'raid'`;
-            ctxPage.fillStyle = `${config.color[config.raid.nameColor]}`;
-            ctxPage.fillText(
-                String(raidName),
-                config.raid.nameX,
-                config.raid.nameY
-            );
+            const rank = rankData[i];
+            if (i < 3) {
+                // Big card
+                if (rank) {
+                    if (i === 0) {
+                        await drawBigCard(
+                            ctxPage,
+                            rank,
+                            canvas.width / 2,
+                            cardLayout,
+                            cardPlane,
+                            cardBGPlane,
+                            rankIcon,
+                            crown,
+                            true
+                        );
+                    } else {
+                        const posX =
+                            i === 1
+                                ? (canvas.width / 16) * 3
+                                : (canvas.width / 16) * 13;
+                        await drawBigCard(
+                            ctxPage,
+                            rank,
+                            posX,
+                            card2Layout,
+                            card2Plane,
+                            card2BGPlane,
+                            rankIcon,
+                            crown
+                        );
+                    }
+                }
+            } else {
+                // Small card positioning
+                const posY = {
+                    card: page === 0 ? config.card2.y : config.card2.yNew,
+                    icon: page === 0 ? config.rank.iconY : config.rank.iconYNew,
+                    profile:
+                        page === 0 ? config.profile.y : config.profile.yNew,
+                    rank: page === 0 ? config.rank.y : config.rank.yNew,
+                    score: page === 0 ? config.score.y : config.score.yNew,
+                };
 
-            localCanvasCreated = true;
-        }
-
-        const rank = rankData[i];
-        if (i < 3) {
-            // Big card
-            if (rank) {
-                if (i === 0) {
-                    await drawBigCard(
+                // Determine position and call the function
+                if (
+                    i === config.limit.page1 - 1 ||
+                    (i === rankData.length - 1 && rankData.length % 2 !== 0)
+                ) {
+                    await drawSmallCard(
                         ctxPage,
+                        pos,
                         rank,
-                        canvas.width / 2,
-                        cardLayout,
-                        cardPlane,
-                        cardBGPlane,
                         rankIcon,
-                        crown,
-                        true
+                        card3Layout,
+                        card3Plane,
+                        config.card2.xCenter,
+                        config.rank.iconXCenter,
+                        config.profile.xCenter,
+                        config.rank.xCenter,
+                        config.score.xCenter,
+                        posY
                     );
-                } else {
-                    const posX =
-                        i === 1
-                            ? (canvas.width / 16) * 3
-                            : (canvas.width / 16) * 13;
-                    await drawBigCard(
+                    pos++;
+                } else if (
+                    (page === 0 && i % 2 === 0) ||
+                    (page > 0 && i % 2 != 0)
+                ) {
+                    await drawSmallCard(
                         ctxPage,
+                        pos,
                         rank,
-                        posX,
-                        card2Layout,
-                        card2Plane,
-                        card2BGPlane,
                         rankIcon,
-                        crown
+                        card3Layout,
+                        card3Plane,
+                        config.card2.x2,
+                        config.rank.iconX2,
+                        config.profile.x2,
+                        config.rank.x2,
+                        config.score.x2,
+                        posY
+                    );
+                    pos++;
+                } else {
+                    await drawSmallCard(
+                        ctxPage,
+                        pos,
+                        rank,
+                        rankIcon,
+                        card3Layout,
+                        card3Plane,
+                        config.card2.x,
+                        config.rank.iconX,
+                        config.profile.x,
+                        config.rank.x,
+                        config.score.x,
+                        posY
                     );
                 }
             }
-        } else {
-            // Small card positioning
-            const posY = {
-                card: page === 0 ? config.card2.y : config.card2.yNew,
-                icon: page === 0 ? config.rank.iconY : config.rank.iconYNew,
-                profile: page === 0 ? config.profile.y : config.profile.yNew,
-                rank: page === 0 ? config.rank.y : config.rank.yNew,
-                score: page === 0 ? config.score.y : config.score.yNew,
-            };
 
-            // Determine position and call the function
+            // Sticker on the last page
             if (
-                i === config.limit.page1 - 1 ||
-                (i === rankData.length - 1 && rankData.length % 2 !== 0)
+                i === rankData.length - 1 &&
+                pos <= Math.ceil(config.limit.pageLast / 2)
             ) {
-                await drawSmallCard(
-                    ctxPage,
-                    pos,
-                    rank,
-                    rankIcon,
-                    card3Layout,
-                    card3Plane,
-                    config.card2.xCenter,
-                    config.rank.iconXCenter,
-                    config.profile.xCenter,
-                    config.rank.xCenter,
-                    config.score.xCenter,
-                    posY
-                );
-                pos++;
-            } else if (
-                (page === 0 && i % 2 === 0) ||
-                (page > 0 && i % 2 != 0)
-            ) {
-                await drawSmallCard(
-                    ctxPage,
-                    pos,
-                    rank,
-                    rankIcon,
-                    card3Layout,
-                    card3Plane,
-                    config.card2.x2,
-                    config.rank.iconX2,
-                    config.profile.x2,
-                    config.rank.x2,
-                    config.score.x2,
-                    posY
-                );
-                pos++;
-            } else {
-                await drawSmallCard(
-                    ctxPage,
-                    pos,
-                    rank,
-                    rankIcon,
-                    card3Layout,
-                    card3Plane,
-                    config.card2.x,
-                    config.rank.iconX,
-                    config.profile.x,
-                    config.rank.x,
-                    config.score.x,
-                    posY
+                ctxPage.drawImage(
+                    sticker,
+                    canvas.width / 2 - sticker.width / 5,
+                    1900,
+                    sticker.width / 2.5,
+                    sticker.height / 2.5
                 );
             }
+
+            // Next page
+            if (
+                (page === 0 && i >= config.limit.page1 - 1) ||
+                (page > 0 &&
+                    (i - (config.limit.page1 - 1)) % config.limit.pageMiddle ===
+                        0) ||
+                i === rankData.length - 1
+            ) {
+                // Save
+                const buffer = canvasPage.toBuffer("image/webp", {
+                    quality: 1,
+                });
+
+                const outputFileName = `output${page}.webp`;
+                const outputPath = path.join("output", outputFileName);
+
+                // Save the buffer to a file in the specified folder
+                fs.writeFile(outputPath, buffer);
+
+                // Convert to Base64
+                const dataURL = canvasPage.toDataURL();
+                images.push(dataURL);
+
+                page += 1;
+                pos = 0;
+                localCanvasCreated = false;
+            }
         }
-
-        // Sticker on the last page
-        if (
-            i === rankData.length - 1 &&
-            pos <= Math.ceil(config.limit.pageLast / 2)
-        ) {
-            ctxPage.drawImage(
-                sticker,
-                canvas.width / 2 - sticker.width / 5,
-                1900,
-                sticker.width / 2.5,
-                sticker.height / 2.5
-            );
-        }
-
-        // Next page
-        if (
-            (page === 0 && i >= config.limit.page1 - 1) ||
-            (page > 0 &&
-                (i - (config.limit.page1 - 1)) % config.limit.pageMiddle ===
-                    0) ||
-            i === rankData.length - 1
-        ) {
-            // Save
-            const buffer = canvasPage.toBuffer("image/webp", { quality: 1 });
-
-            const outputFileName = `output${page}.webp`;
-            const outputPath = path.join("output", outputFileName);
-
-            // Save the buffer to a file in the specified folder
-            fs.writeFile(outputPath, buffer);
-
-            page += 1;
-            pos = 0;
-            localCanvasCreated = false;
-        }
+    } catch (error) {
+        console.log(error);
     }
-} catch (error) {
-    console.log(error);
+
+    return images;
 }
