@@ -109,7 +109,6 @@ const config = {
         pageLast: 10,
     },
 };
-const apiImage = "https://atsuko.mysrv.us";
 
 const imageCache = {};
 GlobalFonts.registerFromPath(`fonts/AllenSans-Bold.ttf`, "profile");
@@ -322,7 +321,7 @@ async function drawCard(layout, plane, fav, type = "small", img = null) {
     const ctx = canvas.getContext("2d");
 
     const favImage = await processLobbyAvatar(
-        await getImage(`${apiImage}/assets/lobby/${fav}.webp`)
+        await getImage(`${process.env.API_BOT}/assets/lobby/${fav}.webp`)
     );
 
     // Draw image
@@ -532,13 +531,13 @@ export async function generateLeaderboard(ranks, type) {
         const dynamicPaths = {
             raidBackground: `./images/raid/background/${raidDevName}.png`,
             raidSprite: `./images/raid/portrait/${raidDevName}.png`,
-            platinum: `${apiImage}/assets/rank/Platinum.webp`,
-            gold: `${apiImage}/assets/rank/Gold.webp`,
-            silver: `${apiImage}/assets/rank/Silver.webp`,
-            bronze: `${apiImage}/assets/rank/Bronze.webp`,
-            indoor: `${apiImage}/assets/terrain/Indoor.webp`,
-            outdoor: `${apiImage}/assets/terrain/Outdoor.webp`,
-            urban: `${apiImage}/assets/terrain/Urban.webp`,
+            platinum: `${process.env.API_BOT}/assets/rank/Platinum.webp`,
+            gold: `${process.env.API_BOT}/assets/rank/Gold.webp`,
+            silver: `${process.env.API_BOT}/assets/rank/Silver.webp`,
+            bronze: `${process.env.API_BOT}/assets/rank/Bronze.webp`,
+            indoor: `${process.env.API_BOT}/assets/terrain/Indoor.webp`,
+            outdoor: `${process.env.API_BOT}/assets/terrain/Outdoor.webp`,
+            urban: `${process.env.API_BOT}/assets/terrain/Urban.webp`,
         };
 
         const allPaths = { ...paths, ...dynamicPaths };
