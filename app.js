@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
-import jwt from "jsonwebtoken";
 import { checkSchema, matchedData } from "express-validator";
 import { seasonFilter } from "./validations/validate.js";
 import { generateLeaderboard } from "./leaderboard.js";
+import { getToken, fetchData } from "./functions/function.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -17,35 +17,7 @@ app.use(
     })
 );
 
-const payload = {
-    service: process.env.NAME,
-    exp: Math.floor(Date.now() / 1000) + 60 * 5,
-};
-
-const token = jwt.sign(payload, process.env.JWT_SECRET);
-
-// Fetch data from api
-async function fetchData(url, token) {
-    try {
-        const response = await fetch(url, {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        });
-
-        if (!response.ok) {
-            throw new Error(
-                `Failed to fetch data: ${response.status} ${response.statusText}`
-            );
-        }
-
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        return {};
-    }
-}
+const token = await getToken();
 
 app.get(
     "/leaderboard",
