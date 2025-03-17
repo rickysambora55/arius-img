@@ -2,6 +2,10 @@ import { createCanvas, loadImage, GlobalFonts } from "@napi-rs/canvas";
 import fs from "fs/promises";
 import path from "path";
 import fetch from "node-fetch";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const config = {
     canvas: {
@@ -512,25 +516,65 @@ export async function generateLeaderboard(ranks, type) {
 
         // Import layouts
         const paths = {
-            layout: "images/leaderboard/Layout.png",
-            layout2: "images/leaderboard/Layout2.png",
-            gradient: "images/leaderboard/Gradient.png",
-            raidPlane: "images/leaderboard/Raid Plane.png",
-            raidLayout: "images/leaderboard/Raid Layout.png",
-            cardLayout: "images/leaderboard/Card Layout.png",
-            cardPlane: "images/leaderboard/Card Plane.png",
-            cardBGPlane: "images/leaderboard/Card BGPlane.png",
-            card2Layout: "images/leaderboard/card2 Layout.png",
-            card2Plane: "images/leaderboard/card2 Plane.png",
-            card2BGPlane: "images/leaderboard/card2 BGPlane.png",
-            card3Layout: "images/leaderboard/card3 Layout.png",
-            card3Plane: "images/leaderboard/card3 Plane.png",
-            crown: "images/leaderboard/Crown.png",
-            sticker: "images/leaderboard/Sticker.png",
+            layout: path.resolve(__dirname, "images/leaderboard/Layout.png"),
+            layout2: path.resolve(__dirname, "images/leaderboard/Layout2.png"),
+            gradient: path.resolve(
+                __dirname,
+                "images/leaderboard/Gradient.png"
+            ),
+            raidPlane: path.resolve(
+                __dirname,
+                "images/leaderboard/Raid Plane.png"
+            ),
+            raidLayout: path.resolve(
+                __dirname,
+                "images/leaderboard/Raid Layout.png"
+            ),
+            cardLayout: path.resolve(
+                __dirname,
+                "images/leaderboard/Card Layout.png"
+            ),
+            cardPlane: path.resolve(
+                __dirname,
+                "images/leaderboard/Card Plane.png"
+            ),
+            cardBGPlane: path.resolve(
+                __dirname,
+                "images/leaderboard/Card BGPlane.png"
+            ),
+            card2Layout: path.resolve(
+                __dirname,
+                "images/leaderboard/card2 Layout.png"
+            ),
+            card2Plane: path.resolve(
+                __dirname,
+                "images/leaderboard/card2 Plane.png"
+            ),
+            card2BGPlane: path.resolve(
+                __dirname,
+                "images/leaderboard/card2 BGPlane.png"
+            ),
+            card3Layout: path.resolve(
+                __dirname,
+                "images/leaderboard/card3 Layout.png"
+            ),
+            card3Plane: path.resolve(
+                __dirname,
+                "images/leaderboard/card3 Plane.png"
+            ),
+            crown: path.resolve(__dirname, "images/leaderboard/Crown.png"),
+            sticker: path.resolve(__dirname, "images/leaderboard/Sticker.png"),
         };
+
         const dynamicPaths = {
-            raidBackground: `images/raid/background/${raidDevName}.png`,
-            raidSprite: `images/raid/portrait/${raidDevName}.png`,
+            raidBackground: path.resolve(
+                __dirname,
+                `images/raid/background/${raidDevName}.png`
+            ),
+            raidSprite: path.resolve(
+                __dirname,
+                `images/raid/portrait/${raidDevName}.png`
+            ),
             platinum: `${process.env.API_BOT}/assets/rank/Platinum.webp`,
             gold: `${process.env.API_BOT}/assets/rank/Gold.webp`,
             silver: `${process.env.API_BOT}/assets/rank/Silver.webp`,
