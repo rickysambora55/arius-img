@@ -1,11 +1,10 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { checkSchema, matchedData } from "express-validator";
 import { seasonFilter } from "./validations/validate.js";
 import { generateLeaderboard } from "./leaderboard.js";
 import { getToken, fetchData } from "./functions/function.js";
-import dotenv from "dotenv";
-dotenv.config();
 
 const app = express();
 
