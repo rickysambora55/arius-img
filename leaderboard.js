@@ -818,8 +818,12 @@ export async function generateLeaderboard(ranks, type) {
                     quality: 1,
                 });
 
+                const outputDir = process.env.VERCEL
+                    ? "/tmp"
+                    : path.resolve(__dirname, "output");
+
                 const outputFileName = `output${page}.webp`;
-                const outputPath = path.join("output", outputFileName);
+                const outputPath = path.join(outputDir, outputFileName);
 
                 // Save the buffer to a file in the specified folder
                 fs.writeFile(outputPath, buffer);
