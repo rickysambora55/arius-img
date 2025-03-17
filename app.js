@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import jwt from "jsonwebtoken";
 import { checkSchema, matchedData } from "express-validator";
 import { seasonFilter } from "./validations/validate.js";
@@ -8,7 +9,13 @@ dotenv.config();
 
 const app = express();
 
+app.disable("x-powered-by");
 app.use(express.json());
+app.use(
+    cors({
+        methods: ["GET"],
+    })
+);
 
 const payload = {
     service: process.env.NAME,
