@@ -544,23 +544,23 @@ export async function generateLeaderboard(ranks, type) {
             ),
             card2Layout: path.resolve(
                 __dirname,
-                "images/leaderboard/card2 Layout.png"
+                "images/leaderboard/Card2 Layout.png"
             ),
             card2Plane: path.resolve(
                 __dirname,
-                "images/leaderboard/card2 Plane.png"
+                "images/leaderboard/Card2 Plane.png"
             ),
             card2BGPlane: path.resolve(
                 __dirname,
-                "images/leaderboard/card2 BGPlane.png"
+                "images/leaderboard/Card2 BGPlane.png"
             ),
             card3Layout: path.resolve(
                 __dirname,
-                "images/leaderboard/card3 Layout.png"
+                "images/leaderboard/Card3 Layout.png"
             ),
             card3Plane: path.resolve(
                 __dirname,
-                "images/leaderboard/card3 Plane.png"
+                "images/leaderboard/Card3 Plane.png"
             ),
             crown: path.resolve(__dirname, "images/leaderboard/Crown.png"),
             sticker: path.resolve(__dirname, "images/leaderboard/Sticker.png"),
