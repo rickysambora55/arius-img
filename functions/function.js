@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 export async function getToken() {
     const payload = {
-        service: process.env.NAME,
+        service: process.env.JWT_NAME,
         exp: Math.floor(Date.now() / 1000) + 60 * 5,
     };
 

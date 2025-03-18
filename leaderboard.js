@@ -14,7 +14,7 @@ const config = {
         width: 1275,
         height: 1450,
     },
-    default: { student: 10000 },
+    default: { student: 0 },
     color: {
         primary: "#6c8be3",
         white: "#ffffff",
