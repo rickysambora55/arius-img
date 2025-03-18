@@ -92,13 +92,7 @@ async function main() {
 
     console.log("Leaderboard image generated successfully");
     console.log("Check the 'output' directory for the generated image");
-    console.log(
-        `Leaderboard image path: ${join(
-            __dirname,
-            "output",
-            `${type}_${season}.png`
-        )}`
-    );
+    console.log(`Leaderboard image path: ${join(__dirname, "output")}`);
 }
 
 main();

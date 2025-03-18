@@ -822,7 +822,7 @@ export async function generateLeaderboard(ranks, type) {
                     ? "/tmp"
                     : path.resolve(__dirname, "output");
 
-                const outputFileName = `output${page}.webp`;
+                const outputFileName = `${type}_${ranks.schedule.season}_${page}.webp`;
                 const outputPath = path.join(outputDir, outputFileName);
 
                 // Save the buffer to a file in the specified folder
