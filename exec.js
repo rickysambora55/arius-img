@@ -1,7 +1,7 @@
 const arg = process.argv;
 import { generateLeaderboard } from "./leaderboard.js";
 import { getToken, fetchData } from "./functions/function.js";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import { dirname, join } from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -92,7 +92,9 @@ async function main() {
 
     console.log("Leaderboard image generated successfully");
     console.log("Check the 'output' directory for the generated image");
-    console.log(`Leaderboard image path: ${join(__dirname, "output")}`);
+    console.log(
+        `Leaderboard image path: ${pathToFileURL(join(__dirname, "output"))}`
+    );
 }
 
 main();

@@ -67,6 +67,7 @@ const config = {
         iconX2: 1385,
         iconXCenter: 755,
         iconY: 1942,
+        iconYNew: 794,
         topY: 1377,
         x: 276,
         x2: 1523,
