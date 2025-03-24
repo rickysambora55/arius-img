@@ -1,8 +1,8 @@
-import { createCanvas, loadImage, GlobalFonts } from "@napi-rs/canvas";
+import { createCanvas, GlobalFonts } from "@napi-rs/canvas";
 import fs from "fs/promises";
 import path from "path";
-import fetch from "node-fetch";
 import { fileURLToPath } from "url";
+import { getCachedImage } from "./functions/function.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -115,33 +115,10 @@ const config = {
     },
 };
 
-const imageCache = {};
 GlobalFonts.registerFromPath(`fonts/AllenSans-Bold.ttf`, "profile");
 GlobalFonts.registerFromPath(`fonts/Canterbury.ttf`, "logo");
 GlobalFonts.registerFromPath(`fonts/FontSpring-BoldItalic.otf`, "raid");
 GlobalFonts.registerFromPath(`fonts/ZingRustDemo-Base.otf`, "number");
-
-// Store images
-async function getCachedImage(path, loader = loadImage) {
-    const resolvedPath = typeof path === "function" ? path() : path;
-
-    if (!imageCache[path]) {
-        if (!(await fileExists(resolvedPath))) {
-            throw new Error(`Image not found: ${resolvedPath}`);
-        }
-
-        try {
-            if (resolvedPath.startsWith("http")) {
-                imageCache[resolvedPath] = getImage(resolvedPath);
-            } else {
-                imageCache[resolvedPath] = loader(resolvedPath);
-            }
-        } catch (error) {
-            throw new Error(`Unsupported image source: ${resolvedPath}`);
-        }
-    }
-    return await imageCache[path];
-}
 
 // Load images in batch
 async function loadImages(paths) {
@@ -152,32 +129,6 @@ async function loadImages(paths) {
         ])
     );
     return Object.fromEntries(entries);
-}
-
-// Check image exist
-async function fileExists(path) {
-    try {
-        if (path.startsWith("http")) {
-            const res = await fetch(path, { method: "HEAD" });
-            return res.ok;
-        } else {
-            await fs.access(path);
-            return true;
-        }
-    } catch {
-        return false;
-    }
-}
-
-// Fetch image from api
-async function getImage(url) {
-    const response = await fetch(url);
-    if (!response.ok)
-        throw new Error(`Failed to fetch image: ${response.statusText}`);
-
-    const buffer = await response.arrayBuffer();
-    const image = await loadImage(Buffer.from(buffer));
-    return image;
 }
 
 // Get rank icon
@@ -326,7 +277,7 @@ async function drawCard(layout, plane, fav, type = "small", img = null) {
     const ctx = canvas.getContext("2d");
 
     const favImage = await processLobbyAvatar(
-        await getImage(`${process.env.API_BOT}/assets/lobby/${fav}.webp`)
+        await getCachedImage(`${process.env.API_BOT}/assets/lobby/${fav}.webp`)
     );
 
     // Draw image
