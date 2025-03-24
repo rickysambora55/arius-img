@@ -63,10 +63,15 @@ app.get(
             token
         );
 
+        if (!response) {
+            res.status(404).json({ message: "Rank data not found" });
+            return;
+        }
+
         const ranks = response;
         const images = await generateLeaderboard(ranks, type);
 
-        res.json({ images });
+        res.json({ ranks, images });
     }
 );
 
