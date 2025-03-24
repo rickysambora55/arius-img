@@ -84,6 +84,11 @@ async function main() {
         "Fetching data"
     );
 
+    if (!ranks) {
+        console.error("❌ No data received. Exiting...");
+        return;
+    }
+
     // Generating leaderboard image
     await showProgress(
         () => generateLeaderboard(ranks, type),

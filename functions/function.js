@@ -79,7 +79,8 @@ export async function fetchData(url, token) {
         const data = await response.json();
         return data;
     } catch (error) {
+        console.log("\n");
         console.error("Error fetching data:", error);
-        return {};
+        return;
     }
 }
