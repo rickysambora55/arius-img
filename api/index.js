@@ -64,14 +64,13 @@ app.get(
         );
 
         if (!response) {
-            res.status(404).json({ message: "Rank data not found" });
-            return;
+            return res.status(404).json({ message: "Rank data not found" });
         }
 
         const ranks = response;
         const images = await generateLeaderboard(ranks, type);
 
-        res.json({ ranks, images });
+        return res.json({ ranks, images });
     }
 );
 
