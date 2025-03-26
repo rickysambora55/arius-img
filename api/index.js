@@ -58,6 +58,7 @@ app.get(
             locations: ["query"],
         });
 
+        const startTime = Date.now();
         const response = await fetchData(
             `${process.env.API_WEB}/api/ranks/${type}/season/${season}`,
             token
@@ -69,8 +70,10 @@ app.get(
 
         const ranks = response;
         const images = await generateLeaderboard(ranks, type);
+        const endTime = Date.now();
+        const time = endTime - startTime;
 
-        return res.json({ ranks, images });
+        return res.json({ time, ranks, images });
     }
 );
 
