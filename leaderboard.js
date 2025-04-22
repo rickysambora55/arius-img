@@ -115,6 +115,7 @@ const config = {
     },
 };
 
+GlobalFonts.registerFromPath(`fonts/NotoSansCJKsc-Medium.ttf`, "fallbackCJKSC");
 GlobalFonts.registerFromPath(`fonts/AllenSans-Bold.ttf`, "profile");
 GlobalFonts.registerFromPath(`fonts/Canterbury.ttf`, "logo");
 GlobalFonts.registerFromPath(`fonts/FontSpring-BoldItalic.otf`, "raid");
@@ -345,7 +346,7 @@ async function drawBigCard(
         ctx.drawImage(crown, posX - crown.width / 2, config.rank.crownY);
     }
 
-    ctx.font = `${config.profile.topWeight} ${config.profile.size}px 'profile'`;
+    ctx.font = `${config.profile.topWeight} ${config.profile.size}px 'profile', "fallbackCJKSC"`;
     ctx.fillStyle = `${config.color[config.profile.color]}`;
     ctx.textAlign = config.profile.topAlign;
     ctx.textBaseline = "alphabetic";
@@ -402,7 +403,7 @@ async function drawSmallCard(
         rankIcon.platinum.height / 3
     );
 
-    ctx.font = `${config.profile.weight} ${config.profile.size}px 'profile'`;
+    ctx.font = `${config.profile.weight} ${config.profile.size}px 'profile', "fallbackCJKSC"`;
     ctx.fillStyle = `${config.color[config.profile.color]}`;
     ctx.textAlign = config.profile.align;
     ctx.textBaseline = "alphabetic";
